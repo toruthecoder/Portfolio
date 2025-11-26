@@ -1,0 +1,64 @@
+{
+  "react": [
+    {
+      "id": 1,
+      "title": "Frozen - Ecommerce APP",
+      "description": "A React-based ecommerce application with modern UI and shopping cart functionality.",
+      "image": "/Data/assets/frozen.png",
+      "link": "https://ecommerce-app-react-gamma.vercel.app/"
+    },
+    {
+      "id": 2,
+      "title": "TO-DO LIST",
+      "description": "A task management application with add delete permenant delete edit update tasks",
+      "image": "/Data/assets/todolist.png",
+      "link": "https://stopwatch-todolist-react.vercel.app/projects"
+    },
+    {
+      "id": 3,
+      "title": "StopWatch",
+      "description": "A stopwatch with the ability of start stop rest time.",
+      "image": "/Data/assets/stopwatch.png",
+      "link": "https://stopwatch-todolist-react.vercel.app/"
+    }
+  ],
+  "javascript": [
+    {
+      "id": 4,
+      "title": "Beans Ecommerce APP",
+      "description": "Coffee App build with HTML CSS JavaScript with cart functionality and add to cart features",
+      "image": "/Data/assets/bean.png",
+      "link": "https://toruthecoder.github.io/Beans-App/"
+    },
+    {
+      "id": 5,
+      "title": "Shoe Ecommerce APP",
+      "description": "Shoe App build with HTML CSS JavaScript with Add To Cart functionality php mail for mailing and much more.",
+      "image": "/Data/assets/shoe.png",
+      "link": "https://toruthecoder.github.io/Shoe-App/"
+    }
+  ],
+  "htmlCss": [
+    {
+      "id": 6,
+      "title": "CookBook Landing Page",
+      "description": "Responsive Landing page created in HTML and BootStrap",
+      "image": "/Data/assets/cookbook.png",
+      "link": "https://toruthecoder.github.io/CookBook-Website/"
+    },
+    {
+      "id": 7,
+      "title": "Testimonial Landing Page",
+      "description": "Attractive fake testimonail page created in HTML and CSS",
+      "image": "/Data/assets/testimonial.png",
+      "link": "https://toruthecoder.github.io/Testimonial-Page/"
+    },
+    {
+      "id": 8,
+      "title": "LogIN Page",
+      "description": "Attractive login and signup page created in HTML and CSS",
+      "image": "/Data/assets/form.png",
+      "link": "https://toruthecoder.github.io/Form-Validation/"
+    }
+  ]
+}
