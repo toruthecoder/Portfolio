@@ -338,6 +338,7 @@ body {
         padding: 1.5rem;
     }
 }
+
 /* Project End */
 
 
@@ -349,22 +350,22 @@ body {
         gap: 15px;
         padding: 0 10px;
     }
-    
+
     .Nav ul {
         flex-wrap: wrap;
         justify-content: center;
         gap: 10px;
     }
-    
+
     .Nav li a {
         margin-right: 15px;
         font-size: 14px;
     }
-    
+
     .Home {
         margin-top: 30px;
     }
-    
+
     .Home img {
         width: 50px;
         height: 60px;
@@ -372,54 +373,60 @@ body {
         margin-left: 30px;
         display: none;
     }
-    
+
     .text .h1 {
         font-size: 1.2rem;
         margin-left: 15px;
     }
-    
+
     .text p {
         font-size: 0.9rem;
         line-height: 1.4;
         width: 90vw;
     }
-    
-    .about .img img{
+
+    .about .img img {
         width: 140px;
-        
+
     }
 
     .links {
-        margin-top: 100px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 15px 0;
+        margin-top: 0;
+        z-index: 1000;
     }
-    
+
     .links ul {
         gap: 20px;
     }
-    
+
     .projects-container {
         padding: 1rem;
     }
-    
+
     .projects-title {
         font-size: 1.7rem;
         margin-bottom: 1.5rem;
     }
-    
+
     .dropdown-header {
         padding: 1rem 1.2rem;
     }
-    
+
     .dropdown-header h1 {
         font-size: 1.2rem;
     }
-    
+
     .projects-grid {
         grid-template-columns: 1fr;
         padding: 1rem;
         gap: 1rem;
     }
-    
+
     .project-image {
         height: 150px;
     }
@@ -431,32 +438,32 @@ body {
         justify-content: center;
         gap: 50px;
     }
-    
+
     .Home img {
         margin-left: 60px;
     }
-    
+
     .text {
         width: 60%;
         margin-left: 20px;
         text-align: left;
     }
-    
+
     .text p {
         text-align: left;
     }
-    
+
     .about {
         flex-direction: row;
         margin-left: 30px;
         align-items: flex-start;
     }
-    
+
     .about .info {
         margin-left: 20px;
         text-align: left;
     }
-    
+
     .Abou p {
         text-align: left;
         padding: 0 30px;
@@ -468,16 +475,16 @@ body {
         flex-direction: column;
         gap: 40px;
     }
-    
+
     .about {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .about .info {
         text-align: center;
     }
-    
+
     .projects-grid {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
