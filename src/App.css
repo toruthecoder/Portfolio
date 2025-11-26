@@ -381,8 +381,14 @@ body {
     .text p {
         font-size: 0.9rem;
         line-height: 1.4;
+        width: 90vw;
     }
     
+    .about .img img{
+        width: 140px;
+        
+    }
+
     .links {
         margin-top: 50px;
     }
