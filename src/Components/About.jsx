@@ -13,7 +13,7 @@ function About() {
           <h4>Education : BS Data-Science ODL</h4>
           <h4>Student : at AIOU</h4>
           <h4>Semester : 1</h4>
-        <a href={ProfilePic} download='profilePic.jpg'><button className='btn2'>Download CV</button></a>
+        <a href='/CV.pdf' download='profilePic.jpg'><button className='btn2'>Download CV</button></a>
         </div>
       </div>
       <div className="text1">
