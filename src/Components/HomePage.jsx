@@ -36,7 +36,7 @@ function HomePage() {
                         </span>
                     </h1>
                     <p>I'm a self-taught web developer passionate about building digital experiences that are both visually appealing and highly functional. I specialize in the front-end, using modern technologies like <b>JavaScript</b>, <b> React</b>, <b> HTML</b>, and <b> CSS</b> to create fast, responsive, and user-friendly websites.</p>          
-                    <a href='/CV.pdf' download='CV.pdf'><button className='btn1'>Download CV</button></a>
+                    <a href='/CVv.pdf' download='CV.pdf'><button className='btn1'>Download CV</button></a>
                 </div>
                 <img src={ProfilePic} alt="My profile Picture" />
             </div>
