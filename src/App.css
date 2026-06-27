@@ -12,6 +12,27 @@ body {
     color: #fff;
 }
 
+/* Loading */
+/* .loader {    
+  width: 20px;
+  aspect-ratio: 1;
+  background: #25b09b;
+  box-shadow: 0 0 60px 15px #25b09b;
+  transform: translate(-80px);
+  clip-path: inset(0);
+  animation:
+    l4-1 0.5s ease-in-out infinite alternate,
+    l4-2 1s   ease-in-out infinite;
+}
+@keyframes l4-1 {
+  100% {transform: translateX(80px)}
+}
+@keyframes l4-2 {
+   33% {clip-path: inset(0 0 0 -100px)}
+   50% {clip-path: inset(0 0 0 0)     }
+   83% {clip-path: inset(0 -100px 0 0)}
+} */
+
 
 /* Nabar */
 .Nav {
@@ -19,6 +40,13 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-top: 10px;
+}
+
+.Nav a {
+  color: white;}
+
+.Nav a.active {
+  color: #0ee60e;
 }
 
 .Nav ul {
@@ -48,6 +76,9 @@ body {
     align-items: center;
     margin-top: 80px;
     flex-direction: column;
+    /* border: 1px solid red; */
+    height: 80vh;
+    justify-content: space-between;
 }
 
 .wrapper {
@@ -56,7 +87,7 @@ body {
 
 .links {
     width: 100%;
-    margin-top: 180px;
+    /* margin-top: 180px; */
     text-align: center;
     display: flex;
     align-items: center;
@@ -196,6 +227,63 @@ body {
     font-weight: 700;
 }
 
+.reactBox{
+    display: flex;
+    background-color: #141212;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.reactBox img{
+    width: 490px;
+    height: 360px;
+    border-radius: 3px;
+}
+
+.reactcl{
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    padding-top: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.reactcl h4{
+    margin-top: 10px;
+}
+
+.reactcl p{
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.reactcl button{
+    width: 150px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    background-color:#40af40;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.reactcl button:hover{
+    background-color: #509650;
+
+}
+
+.last{
+    margin-bottom: 30px;
+}
+
 .dropdown-container {
     display: flex;
     flex-direction: column;
@@ -245,74 +333,96 @@ body {
     overflow: hidden;
     transition: max-height 0.5s ease;
 }
-
-.dropdown.active .dropdown-content {
-    max-height: 1000px;
+.projects-container {
+  min-height: 100vh;
+  padding: 60px 80px;
 }
 
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1.5rem;
-    padding: 2rem;
+.projects-title {
+  color: #2dd4bf;
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 50px;
 }
 
-.project-card {
-    display: block;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    text-decoration: none;
-    color: inherit;
-    background-color: white;
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
 }
 
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+.project-grid > a {
+  display: flex;
+  flex-direction: column;
+  background-color: #141414;
+  border: 1px solid #262626;
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
-.project-image {
-    height: 200px;
-    overflow: hidden;
+.project-grid > a:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }
 
-.project-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.project-card:hover .project-image img {
-    transform: scale(1.05);
+.project-grid > a img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
 }
 
 .project-info {
-    padding: 1.5rem;
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-info h3 {
-    margin: 0 0 0.8rem 0;
-    font-size: 1.4rem;
-    color: #2c3e50;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 10px;
 }
 
 .project-info p {
-    margin: 0 0 1.2rem 0;
-    color: #7f8c8d;
-    line-height: 1.5;
+  color: #a3a3a3;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0 0 16px;
+  flex: 1;
 }
 
 .project-link {
-    color: #3498db;
-    font-weight: 600;
-    transition: color 0.3s ease;
+  align-self: flex-start;
+  background-color: #40af40;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
 }
 
-.project-card:hover .project-link {
-    color: #2980b9;
+.project-grid > a:hover .project-link {
+  background-color: #16a34a;
+}
+
+.loader,
+.error {
+  color: #d4d4d4;
+  text-align: center;
+  font-size: 1.1rem;
+  margin-top: 40px;
+}
+
+.error {
+  color: #f87171;
 }
 
 /* Responsive Design */

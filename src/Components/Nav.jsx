@@ -1,31 +1,38 @@
-import { Link, Outlet } from 'react-router-dom'
+import { Link, Outlet, useLocation } from 'react-router-dom'
 
 function Nav() {
-    return (
-        <>
-            <nav className='Nav'>
-                    <h1>Portfolio</h1>
-                <ul>
-                    <li>
-                        <Link to='/'>Home</Link>
-                    </li>
+  const { pathname } = useLocation()
 
-                    <li>
-                        <Link to='/projects'>Projects</Link>
-                    </li>
-
-                    <li>
-                        <Link to='/contributions'>Contributions</Link>
-                    </li>
-
-                    <li>
-                        <Link to='/about'>About</Link>
-                    </li>
-                </ul>
-            </nav>
-            <Outlet/>
-        </>
-    )
+  return (
+    <>
+      <nav className='Nav'>
+        <h1>Portfolio</h1>
+        <ul>
+          <li>
+            <Link to='/' className={pathname === '/' ? 'active' : ''}>
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to='/projects' className={pathname === '/projects' ? 'active' : ''}>
+              Projects
+            </Link>
+          </li>
+          <li>
+            <Link to='/contributions' className={pathname === '/contributions' ? 'active' : ''}>
+              Contributions
+            </Link>
+          </li>
+          <li>
+            <Link to='/about' className={pathname === '/about' ? 'active' : ''}>
+              About
+            </Link>
+          </li>
+        </ul>
+      </nav>
+      <Outlet />
+    </>
+  )
 }
 
 export default Nav

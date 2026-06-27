@@ -1,40 +1,15 @@
-import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useProjectData } from '../Context/context.jsx'
 
 function Project() {
-  const [activeDropdown, setActiveDropdown] = useState(null);
-  const [projectData, setProjectData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const fetchProjectsData = async () => {
-      try {
-        const res = await fetch('./Data/project-data.json');
-        if (!res.ok) {
-          throw new Error(`failed to fetch data`);
-        }
-
-        const data = await res.json();
-        setProjectData(data);
-      } catch (err) {
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
-    }
-
-    fetchProjectsData();
-  }, [])
-
-  const toggleDropdown = (index) => {
-    setActiveDropdown(activeDropdown === index ? null : index);
-  }
+  const navigate = useNavigate();
+  const { projectData, loading, error } = useProjectData();
 
   if (loading) {
     return (
       <div className="projects-container">
         <h1 className='projects-title'>My Projects</h1>
-        <div className="loading">Loading projects...</div>
+        <div className="loader">Loading projects...</div>
       </div>
     );
   }
@@ -60,80 +35,42 @@ function Project() {
   return (
     <div className="projects-container">
       <h1 className='projects-title'>My Projects</h1>
-      <div className="dropdown-container">
-        {/* React */}
-        <div className={`dropdown batch  ${activeDropdown === 0 ? 'active' : ''}`}>
-          <div className="dropdown-header" onClick={() => toggleDropdown(0)}>
-            <h1>React</h1>
-            <span className='dropdown-icon'>{activeDropdown === 0 ? '-' : '+'}</span>
-          </div>
 
-          <div className="dropdown-content">
-            <div className="projects-grid">
-              {projectData.react.map(project => (
-                <a href={project.link} key={project.id} className='project-card' target='_blank'>
-                  <div className="project-image">
-                    <img src={project.image} alt={project.title} />
-                  </div>
-                  <div className="project-info">
-                    <h3>{project.title}</h3>
-                    <p>{project.description}</p>
-                    <span className="project-link">View Project →</span>
-                  </div>
-                </a>
-              ))}
-            </div>
-          </div>
+      <div className='reactBox'>
+          <img src={projectData.techtribedev[0].image} alt="react portfolio image" />
+        <div className='reactcl'>
+          <h1>Internship</h1>
+          <h4>Company: Tech-Tribe Dev</h4>
+          <h4>Duration: 3 Months</h4>
+          <p>This coloumn holds my projects that I have made in Mern and some responsive projects that I made in tailwind in my <b> Three months of Internship in Tech Tribe Dev </b>.You will see fully responsive projects made in mern.</p>
+          <button onClick={() => navigate('/projects/internship')}>See More</button>
         </div>
+      </div>
 
-        {/* JavaScript */}
-        <div className={`dropdown batch  ${activeDropdown === 1 ? 'active' : ''}`}>
-          <div className="dropdown-header" onClick={() => toggleDropdown(1)}>
-            <h1>JavaScript</h1>
-            <span className='dropdown-icon'>{activeDropdown === 1 ? '-' : '+'}</span>
-          </div>
-
-          <div className="dropdown-content">
-            <div className="projects-grid">
-              {projectData.javascript.map(project => (
-                <a href={project.link} key={project.id} className='project-card' target='_blank'>
-                  <div className="project-image">
-                    <img src={project.image} alt={project.title} />
-                  </div>
-                  <div className="project-info">
-                    <h3>{project.title}</h3>
-                    <p>{project.description}</p>
-                    <span className="project-link">View Project →</span>
-                  </div>
-                </a>
-              ))}
-            </div>
-          </div>
+      <div className='reactBox'>
+          <img src={projectData.react[0].image} alt="react portfolio image" />
+        <div className='reactcl'>
+          <h1>React</h1>
+          <p>This coloumn holds my projects that I have made in react. You will see simple project like stopwatch, todolist and more a little bit complex and feature rich projects such as Ecommerce App made purely in react called Frozen.</p>
+          <button onClick={() => navigate('/projects/react')}>See More</button>
         </div>
+      </div>
 
-        {/* HTML , CSS */}
-        <div className={`dropdown batch  ${activeDropdown === 2 ? 'active' : ''}`}>
-          <div className="dropdown-header" onClick={() => toggleDropdown(2)}>
-            <h1>HTML & CSS</h1>
-            <span className='dropdown-icon'>{activeDropdown === 2 ? '-' : '+'}</span>
-          </div>
+      <div className='reactBox'>
+          <img src={projectData.javascript[0].image} alt="react portfolio image" />
+        <div className='reactcl'>
+          <h1>JavaScript</h1>
+          <p>This coloumn holds my projects that I have made in Javascript. You will see only two projects in this and both are Ecommerce app. One is Beans App and the other is Shoe APP Ecommerce App. Both are Feature rich and holds CURD operations.</p>
+          <button onClick={() => navigate('/projects/javascript')}>See More</button>
+        </div>
+      </div>
 
-          <div className="dropdown-content">
-            <div className="projects-grid">
-              {projectData.htmlCss.map(project => (
-                <a href={project.link} key={project.id} className='project-card' target='_blank'>
-                  <div className="project-image">
-                    <img src={project.image} alt={project.title} />
-                  </div>
-                  <div className="project-info">
-                    <h3>{project.title}</h3>
-                    <p>{project.description}</p>
-                    <span className="project-link">View Project →</span>
-                  </div>
-                </a>
-              ))}
-            </div>
-          </div>
+      <div className='reactBox last'>
+          <img src={projectData.htmlCss[0].image} alt="react portfolio image" />
+        <div className='reactcl'>
+          <h1>Html Css</h1>
+          <p>This coloumn holds my projects that I have made in HTML and CSS. You will see random projects like cookbook website and login/signup page and in these website only the cookbook website is fully responsive and is made in bootstrap.</p>
+          <button onClick={() => navigate('/projects/html-css')}>See More</button>
         </div>
       </div>
     </div>

@@ -11,7 +11,7 @@ function HomePage() {
                 <div className="text">
                     <h1>
                         <span className='h1'>
-                            Front-End Web-
+                            Full-Stack-
                         </span>
 
                         <span style={{
@@ -35,7 +35,7 @@ function HomePage() {
                             />
                         </span>
                     </h1>
-                    <p>I'm a self-taught web developer passionate about building digital experiences that are both visually appealing and highly functional. I specialize in the front-end, using modern technologies like <b>JavaScript</b>, <b> React</b>, <b> HTML</b>, and <b> CSS</b> to create fast, responsive, and user-friendly websites.</p>          
+                    <p className='para'>I'm a self-taught <b>Mern</b> developer passionate about building digital experiences that are both visually appealing and highly functional. I specialize in the <b>Frontend</b> and <b>Backend</b>, using modern technologies like <b> HTML</b>, and <b> CSS</b>, <b>tailwind</b>, <b>JavaScript</b>, <b> React</b>, <b>Mongodb</b>, <b>Express.js</b> and <b>Node.js</b> to create fast, responsive, and user-friendly websites.</p>          
                     <a href='/CVv.pdf' download='CV.pdf'><button className='btn1'>Download CV</button></a>
                 </div>
                 <img src={ProfilePic} alt="My profile Picture" />
